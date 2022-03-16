@@ -5,6 +5,7 @@ Otomasyonun temel amacı özellikle esnafların ürün miktarlarına anlık eri�
 İşverenleri düzensiz faturalandırmalar ile uğraşmaktan ve alacak/verecek/borç üçlüsünün zamanlama açısından sıkıntılarından kurtaracak. 
 
 *********Şema*********
+![DIYAGRAM](https://user-images.githubusercontent.com/101746381/158701460-c3c5d3fa-ed64-4e92-8a25-deee959aff0b.png)
 
 
 Emektarlar:
