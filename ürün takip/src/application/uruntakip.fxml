@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.uruntakipController">
+   <children>
+      <SplitPane layoutX="193.0" layoutY="146.0" prefHeight="500.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+      <TabPane fx:id="table_depo" prefHeight="650.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tab_depo" text="DEPO İŞLEMLERİ:">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="750.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5206185567010309" orientation="VERTICAL" prefHeight="622.0" prefWidth="750.0">
+                           <items>
+                              <AnchorPane fx:id="d_ancher" minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="744.0">
+                                 <children>
+                                    <TextField fx:id="d_alis" layoutX="232.0" layoutY="189.0" prefHeight="26.0" prefWidth="100.0" />
+                                    <TextField fx:id="d_urun" layoutX="232.0" layoutY="68.0" prefHeight="26.0" prefWidth="100.0" />
+                                    <Text layoutX="48.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ürün No:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="52.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alış Fiyatı:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="49.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depoya Giriş Tarihi:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <DatePicker fx:id="d_giristarih" layoutX="232.0" layoutY="129.0" prefHeight="26.0" prefWidth="100.0" />
+                                    <Button fx:id="d_eklebtn" layoutX="145.0" layoutY="283.0" mnemonicParsing="false" onAction="#d_eklebtnclck" prefHeight="26.0" prefWidth="51.0" text="Ekle" />
+                                    <Button fx:id="d_silbtn" layoutX="204.0" layoutY="283.0" mnemonicParsing="false" onAction="#d_silbtnclck" prefHeight="26.0" prefWidth="41.0" text="Sil" />
+                                    <Button fx:id="d_fisyazdirbtn" layoutX="621.0" layoutY="283.0" mnemonicParsing="false" onAction="#d_fisyazdirbtnclck" text="Fiş Yazdır." />
+                                    <Text layoutX="717.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OG">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <RadioButton fx:id="d_radiobtn" layoutX="52.0" layoutY="262.0" mnemonicParsing="false" onAction="#d_radiobtnclck" text="Ödeme Toptancıya Yapıldı" />
+                                    <Button fx:id="d_duzenlebtn" layoutX="255.0" layoutY="283.0" mnemonicParsing="false" onAction="#d_duzenlebtnclck" prefHeight="26.0" prefWidth="64.0" text="Düzenle" />
+                                    <Text fill="RED" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPO İŞLEMLERİ:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="d_toptancı" layoutX="232.0" layoutY="41.0" prefHeight="26.0" prefWidth="100.0" />
+                                    <Text layoutX="49.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toptancı Bilgisi:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="50.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Son Ödeme Tarihi:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <DatePicker fx:id="d_sonodemetarih" layoutX="232.0" layoutY="155.0" prefHeight="26.0" prefWidth="100.0" />
+                                    <TextArea fx:id="d_textarea" layoutX="404.0" layoutY="12.0" prefHeight="250.0" prefWidth="285.0" />
+                                    <TextField fx:id="d_miktar" layoutX="232.0" layoutY="94.0" prefWidth="100.0" promptText="kg veya litre" />
+                                    <Text layoutX="47.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alınan Ürün Miktarı:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="52.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yapılan Taksit Sayısı:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Spinner fx:id="d_taksit" layoutX="232.0" layoutY="229.0" prefHeight="26.0" prefWidth="102.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="306.0" prefWidth="750.0">
+                                 <children>
+                                    <TableView fx:id="d_table" layoutY="15.0" onMouseClicked="#dtableclck" prefHeight="295.0" prefWidth="699.0" style="-fx-background-color: grey;" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="td_toptancı" prefWidth="97.59997099637985" text="Toptancı Bilgisi:" />
+                                          <TableColumn fx:id="td_urun" minWidth="6.4000244140625" prefWidth="68.00000762939453" text="Ürün No:" />
+                                          <TableColumn fx:id="td_miktar" prefWidth="130.3999786376953" text="Alınan Ürün Miktarı:" />
+                                          <TableColumn fx:id="td_giristarih" prefWidth="130.4000244140625" text="Depoya Giriş Tarihi:" />
+                                          <TableColumn fx:id="td_sonodemetarih" prefWidth="118.39999389648438" text="Son Ödeme Tarihi:" />
+                                          <TableColumn fx:id="td_alis" minWidth="9.5999755859375" prefWidth="67.199951171875" text="Alış Fiyatı:" />
+                                          <TableColumn fx:id="td_odeme" prefWidth="68.0" text="ÖDEME" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_musteri" text="MÜŞTERİ İŞLEMLERİ:">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.521290322580645" layoutX="233.0" layoutY="158.0" orientation="VERTICAL" prefHeight="621.6" prefWidth="750.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                              <AnchorPane prefHeight="182.0" prefWidth="750.0">
+                                 <children>
+                                  <AnchorPane fx:id="m_ancher" minHeight="0.0" minWidth="0.0" prefHeight="309.0" prefWidth="699.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <TextField fx:id="m_miktar" layoutX="242.0" layoutY="85.0" prefWidth="100.0" />
+                                          <Text layoutX="63.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miktar:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <Text layoutX="62.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Son Ödeme Tarihi:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <DatePicker fx:id="m_sonodemetarihi" layoutX="242.0" layoutY="180.0" prefHeight="26.0" prefWidth="100.0" />
+                                          <TextField fx:id="m_musteribilgi" layoutX="242.0" layoutY="58.0" prefHeight="26.0" prefWidth="100.0" />
+                                          <Text layoutX="63.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Müşteri Bilgisi:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="RED" layoutX="29.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MÜŞTERİ İŞLEMLERİ:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <RadioButton fx:id="m_radiobtn" layoutX="59.0" layoutY="252.0" mnemonicParsing="false" onAction="#d_fisyazdirbtnclck" text="Müşteri Ödemeyi Yaptı" />
+                                          <TextField fx:id="m_satilanurunno" layoutX="242.0" layoutY="111.0" prefHeight="26.0" prefWidth="100.0" />
+                                          <Text layoutX="63.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Satılan Ürün No:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <Button fx:id="m_eklebtn" layoutX="131.0" layoutY="281.0" mnemonicParsing="false" onAction="#m_eklebtnclck" prefHeight="26.0" prefWidth="51.0" text="Ekle" />
+                                          <Button fx:id="m_silbtn" layoutX="190.0" layoutY="281.0" mnemonicParsing="false" onAction="#m_silbtnclck" prefHeight="26.0" prefWidth="41.0" text="Sil" />
+                                          <Button fx:id="m_duzenlebtn" layoutX="241.0" layoutY="281.0" mnemonicParsing="false" onAction="#m_duzenlebtnclck" prefHeight="26.0" prefWidth="64.0" text="Düzenle" />
+                                          <Spinner fx:id="m_taksit" layoutX="244.0" layoutY="222.0" prefHeight="26.0" prefWidth="97.0" />
+                                          <Text layoutX="62.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yapılan Taksit Sayısı:" wrappingWidth="117.19921874999989">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="m_textarea" layoutX="399.0" layoutY="15.0" prefHeight="250.0" prefWidth="285.0" />
+                                          <Button fx:id="m_fisyazdirbtn" layoutX="616.0" layoutY="281.0" mnemonicParsing="false" onAction="#m_fisyazdirbtnclck" text="Fiş Yazdır." />
+                                          <TextField fx:id="m_satisfiyati" layoutX="242.0" layoutY="145.0" prefHeight="26.0" prefWidth="100.0" />
+                                          <Text layoutX="63.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Satış Fiyatı:">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="301.0" prefWidth="699.0">
+                                 <children>
+                                    <Text layoutX="179.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="20.79998779296875" />
+                                    <TableView fx:id="m_table" layoutX="-22.0" layoutY="-1.0" onMouseClicked="#mtableclck" prefHeight="295.0" prefWidth="700.0" style="-fx-background-color: grey;" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+                                      <columns>
+                                        <TableColumn fx:id="tm_musteribilgi" prefWidth="140.00000303983688" text="Müşteri Bilgisi:" />
+                                        <TableColumn fx:id="tm_miktar" prefWidth="76.79998779296875" text="Miktar:" />
+                                          <TableColumn fx:id="tm_satilanurunno" prefWidth="125.60005187988281" text="Satılan Ürün No:" />
+                                          <TableColumn fx:id="tm_sonodemetarihi" prefWidth="140.0" text="Son Ödeme Tarihi:" />
+                                          <TableColumn fx:id="tm_taksit" prefWidth="124.80001831054688" text="Yapılan Taksit Sayısı:" />
+                                          <TableColumn fx:id="tm_odeme" prefWidth="75.2001953125" text="ÖDEME" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
